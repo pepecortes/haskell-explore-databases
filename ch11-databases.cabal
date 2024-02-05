@@ -25,7 +25,8 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Schemas
+      Queries
   other-modules:
       Paths_ch11_databases
   autogen-modules:
@@ -35,6 +36,14 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , conduit
+    , esqueleto
+    , monad-logger
+    , mtl
+    , persistent
+    , persistent-sqlite
+    , text
+    , unliftio-core
   default-language: Haskell2010
 
 executable ch11-databases-exe
@@ -49,6 +58,14 @@ executable ch11-databases-exe
   build-depends:
       base >=4.7 && <5
     , ch11-databases
+    , conduit
+    , esqueleto
+    , monad-logger
+    , mtl
+    , persistent
+    , persistent-sqlite
+    , text
+    , unliftio-core
   default-language: Haskell2010
 
 test-suite ch11-databases-test
@@ -64,4 +81,12 @@ test-suite ch11-databases-test
   build-depends:
       base >=4.7 && <5
     , ch11-databases
+    , conduit
+    , esqueleto
+    , monad-logger
+    , mtl
+    , persistent
+    , persistent-sqlite
+    , text
+    , unliftio-core
   default-language: Haskell2010
